@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background:rgb(31, 29, 29);;
+        }
+        .editor {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-family: sans-serif;
+        }
+
+        .heading {
+            padding: 1rem;
+            background-color: rgb(31, 29, 29);;;
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .code-input {
+            flex: 1;
+        }
+
+        #code-input {
+            width: 96%;
+            background-color:rgb(31, 29, 29);;;
+            height:50vh;
+            border: 2px solid red;
+            color: rgb(63, 193, 237);
+            font-weight: 500;
+            font-size: 30px;
+            border-radius: 10px;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        .code-output {
+            flex: 1;
+        }
+
+        #code-output {
+            width: 99%;
+            background-color: white;
+            height: 50vh;
+            border: 2px solid red;
+            border-radius: 10px;
+            color: white;
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="heading">Welcome To The Live Code Editor!</div>
+    <div class="editor">
+        <div class="code-input">
+            <textarea id="code-input" placeholder="Start Coding"></textarea>
+        </div>
+        <div class="heading">Live Result</div>
+        <div class="code-output">
+            <iframe id="code-output"></iframe>
+        </div>
+    </div>
+
+    <script>
+        const codeInput = document.getElementById('code-input');
+        const codeOutput = document.getElementById('code-output');
+
+        codeInput.addEventListener('input', updateCode);
+
+        function updateCode() {
+            codeOutput.srcdoc = codeInput.value;
+        }
+    </script>
+</body>
+
+</html>

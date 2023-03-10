@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onilne Code Editor - HTML CSS JS</title>
+    <link rel="shortcut icon" href="images/programming.png" type="image/x-icon">
+    <style>
+        * {
+            background: rgb(31, 29, 29);
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+        }
+
+        .typewriter {
+            width: 100%;
+            margin: auto;
+        }
+
+        .typewriter h1 {
+            color: #fff;
+            font-family: monospace;
+            font-size: 50px;
+            overflow: hidden;
+            border-right: .15em solid orange;
+            text-align: center;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation:
+                typing 3.5s steps(30, end),
+                blink-caret .5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: orange
+            }
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        .btn-hover.color {
+            background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a, #FBB03B);
+            box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+        }
+
+        .btn-hover {
+            height: 55px;
+            width: 200px;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            color: #fff;
+            margin: 50px 0;
+            cursor: pointer;
+            border: none;
+            background-size: 300% 100%;
+            border-radius: 50px;
+            -moz-transition: all .5s ease-in-out;
+            -o-transition: all .5s ease-in-out;
+            -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+        }
+
+        .btn-hover:hover {
+            background-position: 100% 0;
+            -moz-transition: all .5s ease-in-out;
+            -o-transition: all .5s ease-in-out;
+            -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="typewriter">
+            <h1>Online Code Editor</h1>
+        </div>
+        <div class="button">
+            <a href="/coding-area.html">
+                <button class="btn-hover color">START CODING</button>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
